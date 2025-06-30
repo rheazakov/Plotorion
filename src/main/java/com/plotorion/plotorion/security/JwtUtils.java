@@ -36,9 +36,9 @@ public class JwtUtils {
         this.algorithm = SignatureAlgorithm.valueOf(jwtAlgorithm);
     }
 
-    public String generateAccessToken(String usernameOrEmail, User user) {
+    public String generateAccessToken(String username, User user) {
         return Jwts.builder()
-                .setSubject(usernameOrEmail)
+                .setSubject(username)
                 .claim("role", user.getRole().name())
                 .claim("userId", user.getId().toString())
                 .setIssuedAt(new Date())
@@ -47,9 +47,9 @@ public class JwtUtils {
                 .compact();
     }
 
-    public String generateRefreshToken(String usernameOrEmail) {
+    public String generateRefreshToken(String username) {
         return Jwts.builder()
-                .setSubject(usernameOrEmail)
+                .setSubject(username)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + jwtRefreshExpiration))
                 .signWith(key, algorithm)
