@@ -1,6 +1,6 @@
 package com.plotorion.plotorion.security;
 
-import com.plotorion.plotorion.model.User;
+import com.plotorion.plotorion.models.User;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

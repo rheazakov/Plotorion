@@ -1,8 +1,8 @@
 package com.plotorion.plotorion.security;
 
 
-import com.plotorion.plotorion.model.User;
-import com.plotorion.plotorion.repository.UserRepository;
+import com.plotorion.plotorion.models.User;
+import com.plotorion.plotorion.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

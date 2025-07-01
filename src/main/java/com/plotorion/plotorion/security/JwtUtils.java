@@ -1,6 +1,6 @@
 package com.plotorion.plotorion.security;
 
-import com.plotorion.plotorion.model.User;
+import com.plotorion.plotorion.models.User;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import jakarta.annotation.PostConstruct;
